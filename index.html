@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ℒadyblog 🐾 - ℳiraculous </title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #ff69b4;
+            background-image: radial-gradient(circle, white 5px, transparent 5px);
+            background-size: 30px 30px;
+            color: #4a0040;
+            line-height: 1.6;
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 20px 0;
+            border-bottom: 4px solid #ff1493;
+            position: sticky;
+            top: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo {
+            text-align: center;
+            font-size: 3.5rem;
+            font-weight: bold;
+            background: linear-gradient(45deg, #ff1493, #ff69b4);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .logo span {
+            color: #ff1493;
+            background: none;
+        }
+
+        .tagline {
+            text-align: center;
+            color: #b3006b;
+            font-style: italic;
+        }
+
+        nav {
+            background: rgba(255, 240, 245, 0.9);
+            margin-top: 15px;
+            border-radius: 50px;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #b3006b;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 20px;
+            display: inline-block;
+            border-radius: 25px;
+        }
+
+        nav a:hover {
+            background: #ff69b4;
+            color: white;
+        }
+
+        .destaque {
+            background: linear-gradient(135deg, #ff69b4, #ff1493);
+            margin: 30px 0;
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            color: white;
+        }
+
+        .destaque-badge {
+            background: white;
+            color: #ff1493;
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+        }
+
+        .btn-leia {
+            display: inline-block;
+            background: white;
+            color: #ff1493;
+            padding: 12px 30px;
+            margin-top: 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .grid-noticias {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            overflow: hidden;
+            text-align: center;
+            padding-bottom: 20px;
+        }
+
+        .card-imagem {
+            height: 200px;
+            background: linear-gradient(135deg, #ffb6c1, #ff69b4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+        }
+
+        .card-conteudo {
+            padding: 20px;
+        }
+
+        .card-categoria {
+            color: #ff1493;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        .card h3 {
+            margin: 10px 0;
+        }
+
+        .btn-foto {
+            background: #ff1493;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 25px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .btn-foto:hover {
+            background: #ff69b4;
+        }
+
+        .sobre {
+            background: rgba(255, 255, 255, 0.85);
+            border-radius: 20px;
+            padding: 30px;
+            margin: 40px 0;
+            text-align: center;
+            border-left: 5px solid #ff1493;
+        }
+
+        footer {
+            background: rgba(255, 255, 255, 0.9);
+            text-align: center;
+            padding: 30px;
+            margin-top: 40px;
+            border-top: 2px solid #ff1493;
+            font-size: 0.8rem;
+            color: #b3006b;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-conteudo {
+            background: white;
+            padding: 20px;
+            border-radius: 20px;
+            text-align: center;
+        }
+
+        .modal-conteudo img {
+            max-width: 90%;
+            max-height: 70vh;
+            border-radius: 15px;
+        }
+
+        .fechar {
+            background: #ff1493;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            margin-top: 15px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo">ℒady<span>ℬlog 🐞</span></div>
+            <div class="tagline">🌸 Acompanhe as aventuras da Ladybug e Cat Noir em Paris! 🐞🐾</div>
+            <nav>
+                <a href="#">🏠 INÍCIO</a>
+                <a href="#">📸TEORIA MIRACULOUS</a>
+                <a href="#">🖌️FANARTS</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <div class="destaque">
+            <div class="destaque-badge">! feito por uma miraculer !🌸</div>
+            <h2>🐞 site dedicado a miraculers q smpr sonharam com um ladyblog !</h2>
+            <p>nossa heroina ladybug!</p>
+            <a href="#" class="btn-leia">📷 VER FOTOS →</a>
+        </div>
+
+        <div class="grid-noticias" id="grid-noticias"></div>
+
+        <div class="sobre">
+            <h3>🎙️ Sobre o Ladyblog</h3>
+            <p>O blog MAIS CONFIÁVEL sobre as aventuras da Ladybug e do Cat Noir! Sou a Alya Césaire, repórter oficial dos heróis de Paris.</p>
+            <p style="margin-top: 15px;">🐞 Sigam-me para mais informações! 🐾
+               🌸 insta : @ladyblogofc_
+            </p>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>Ladyblog | O blog oficial da Alya Césaire | 💖</p>
+        <p>📧 contato@ladyblog.com | 📍 Paris - França</p>
+    </footer>
+
+    <div id="modal" class="modal">
+        <div class="modal-conteudo">
+            <img id="modal-imagem" src="" alt="Foto">
+            <br>
+            <button class="fechar" onclick="fecharModal()">Fechar</button>
+        </div>
+    </div>
+
+    <script>
+        const noticias = [
+            { emoji: "🐞", categoria: "BATALHA", titulo: "Ladybug vs Mothman", descricao: "A luta mais épica da semana!", fotoUrl: "https://via.placeholder.com/400x300?text=Ladybug" },
+            { emoji: "🐾", categoria: "MISTÉRIO", titulo: "Cat Noir sumiu?", descricao: "Fãs estão especulando sobre o paradeiro do herói.", fotoUrl: "https://via.placeholder.com/400x300?text=Cat+Noir" },
+            { emoji: "💎", categoria: "DESCOBERTA", titulo: "Novo Miraculous", descricao: "Um novo herói apareceu em Paris!", fotoUrl: "https://via.placeholder.com/400x300?text=Miraculous" },
+            { emoji: "📸", categoria: "FOTO DO DIA", titulo: "Ladybug posando", descricao: "Selfie exclusiva da heroína!", fotoUrl: "https://via.placeholder.com/400x300?text=Selfie" },
+            { emoji: "🗼", categoria: "LOCALIZAÇÃO", titulo: "Torre Eiffel", descricao: "Último avistamento dos heróis!", fotoUrl: "https://via.placeholder.com/400x300?text=Torre+Eiffel" }
+        ];
+
+        function carregarNoticias() {
+            const grid = document.getElementById('grid-noticias');
+            grid.innerHTML = '';
+            for (let i = 0; i < noticias.length; i++) {
+                const n = noticias[i];
+                const card = document.createElement('div');
+                card.className = 'card';
+                card.innerHTML = `
+                    <div class="card-imagem">${n.emoji}</div>
+                    <div class="card-conteudo">
+                        <div class="card-categoria">${n.categoria}</div>
+                        <h3>${n.titulo}</h3>
+                        <p>${n.descricao}</p>
+                        <button class="btn-foto" onclick="abrirFoto('${n.fotoUrl}')">📷 VER FOTO</button>
+                    </div>
+                `;
+                grid.appendChild(card);
+            }
+        }
+
+        function abrirFoto(url) {
+            const modal = document.getElementById('modal');
+            const imagem = document.getElementById('modal-imagem');
+            imagem.src = url;
+            modal.style.display = 'flex';
+        }
+
+        function fecharModal() {
+            document.getElementById('modal').style.display = 'none';
+        }
+
+        window.onclick = function(event) {
+            if (event.target === document.getElementById('modal')) {
+                fecharModal();
+            }
+        }
+
+        carregarNoticias();
+    </script>
+
+</body>
+</html>
